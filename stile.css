@@ -18,6 +18,7 @@ body {
     background-color: #ffffff;
     color: var(--dark-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -70,12 +71,102 @@ header {
 
 .nav-icons {
     display: flex;
-    gap: 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
+    align-items: center;
 }
 
-/* --- HERO & INTESTAZIONI PAGINE INTERNE --- */
+/* --- MECCANISMO SIDEBAR (SOLO HTML/CSS) --- */
+.sidebar-checkbox {
+    display: none; /* Nasconde il quadratino di spunta */
+}
+
+.sidebar-btn {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--dark-color);
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.sidebar-btn:hover {
+    color: var(--primary-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Nascosta inizialmente a destra */
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 2000;
+    transition: right 0.3s ease-in-out;
+    padding: 40px 25px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.sidebar h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    font-weight: 600;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Sfondo scuro semitrasparente quando la barra è aperta */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1999;
+    display: none;
+}
+
+/* Logica di apertura attivata dal click del bottone */
+.sidebar-checkbox:checked ~ .sidebar {
+    right: 0; /* Fa scivolare dentro la sidebar */
+}
+
+.sidebar-checkbox:checked ~ .sidebar-overlay {
+    display: block; /* Mostra lo sfondo scuro */
+}
+
+/* --- HERO & INTESTAZIONI PAGINE --- */
 .hero {
     background: linear-gradient(135deg, #ffffff 0%, #e6f7fd 100%);
     padding: 90px 20px;
@@ -157,7 +248,7 @@ header {
     border-radius: 3px;
 }
 
-/* --- GRIGLIE E CARD (PRODOTTI E EVENTI) --- */
+/* --- GRIGLIE E CARD --- */
 .grid-categories, .grid-products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -358,4 +449,242 @@ footer {
     .nav-menu { display: none; }
     .hero h1 { font-size: 2.2rem; }
     .about-container { flex-direction: column-reverse; }
+}
+/* --- SEZIONE SOCIAL (PAGINA EVENTI) --- */
+.social-section {
+    text-align: center;
+    background-color: var(--light-color);
+    padding: 60px 20px;
+    border-radius: 20px;
+    border: 2px dashed var(--secondary-color);
+    margin-top: 80px;
+}
+
+.social-desc {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: var(--dark-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff !important; /* Forza il testo bianco */
+    transition: transform 0.2s, box-shadow 0.3s;
+    font-size: 0.95rem;
+}
+
+/* Colore sfumato ufficiale Brand Instagram */
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 5px 20px rgba(220, 39, 67, 0.4);
+}
+
+/* Blu ufficiale Brand Facebook */
+.btn-facebook {
+    background-color: #1877f2;
+    box-shadow: 0 5px 20px rgba(24, 119, 242, 0.4);
+}
+
+/* Effetto al passaggio del mouse per entrambi i bottoni */
+.btn-social:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon {
+    font-size: 1.3rem;
+}
+/* --- SEZIONE COSTUMI & ACCESSORI --- */
+.costumi-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.costume-cat-card {
+    background: #ffffff;
+    border: 2px solid #eef7fa;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.costume-cat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.costume-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.costume-cat-card h3 {
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Bottoni per le Sotto-sezioni (Halloween / Carnevale) */
+.sub-cat-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn-sub {
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white !important;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-halloween {
+    background: linear-gradient(135deg, #ff6600 0%, #cc3300 100%);
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+.btn-carnevale {
+    background: linear-gradient(135deg, #a100ff 0%, #7100b3 100%);
+    box-shadow: 0 4px 10px rgba(161, 0, 255, 0.3);
+}
+
+.btn-sub:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Struttura Sotto-sezioni interne alle pagine */
+.sub-section-title {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin: 50px 0 25px 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #eef7fa;
+    padding-bottom: 10px;
+}
+/* --- SEZIONE COSTUMI, ACCESSORI & GOLIARDICO --- */
+.costumi-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.costume-cat-card {
+    background: #ffffff;
+    border: 2px solid #eef7fa;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.costume-cat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.costume-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.costume-cat-card h3 {
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Bottoni sotto-categorie e goliardico */
+.sub-cat-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn-sub {
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white !important;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-halloween {
+    background: linear-gradient(135deg, #ff6600 0%, #cc3300 100%);
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+.btn-carnevale {
+    background: linear-gradient(135deg, #a100ff 0%, #7100b3 100%);
+    box-shadow: 0 4px 10px rgba(161, 0, 255, 0.3);
+}
+
+.btn-goliardico {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #c91119 100%);
+    box-shadow: 0 4px 10px rgba(230, 25, 34, 0.3);
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.btn-sub:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.sub-section-title {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin: 50px 0 25px 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #eef7fa;
+    padding-bottom: 10px;
+}
+
+/* Gestione responsiva per i bottoni dei costumi su mobile */
+@media (max-width: 768px) {
+    .sub-cat-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
