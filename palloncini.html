@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Nostri Palloncini | Smile Palloncini</title>
+    <title>Costumi & Accessori | Smile Palloncini</title>
     <link rel="stylesheet" href="stile.css">
 </head>
 <body>
@@ -14,44 +14,91 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="palloncini.html" class="active">I Nostri Palloncini</a></li>
+                    <li><a href="palloncini.html" class="active">Costumi & Accessori</a></li>
                     <li><a href="eventi.html">Feste & Eventi</a></li>
                     <li><a href="fuochi-dartificio.html">Fuochi D'Artificio</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
             </nav>
-            <div class="nav-icons"><span>🔍</span></div>
+            <div class="nav-icons">
+                <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+                <label for="sidebar-toggle" class="sidebar-btn">☰</label>
+                <div class="sidebar">
+                    <label for="sidebar-toggle" class="close-btn">&times;</label>
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="contatti.html">Richiedi Preventivo</a></li>
+                        <li><a href="eventi.html">Galleria Foto</a></li>
+                        <li><a href="fuochi-dartificio.html">Il Nostro Team</a></li>
+                        <li><a href="contatti.html">Dove Siamo</a></li>
+                    </ul>
+                </div>
+                <label for="sidebar-toggle" class="sidebar-overlay"></label>
+            </div>
         </div>
     </header>
 
     <section class="page-header">
-        <h1>I Nostri Palloncini</h1>
-        <p>Utilizziamo solo materiali professionali, biodegradabili e di altissima qualità.</p>
+        <h1>Costumi & Accessori</h1>
+        <p>Scegli la categoria ed esplora i nostri travestimenti per ogni occasione speciale.</p>
     </section>
 
     <section class="section">
-        <div class="grid-products">
-            <div class="product-card">
-                <div class="card-img img-1">🎈</div>
-                <div class="card-content">
-                    <h3>Palloncini in Lattice</h3>
-                    <p>Disponibili in oltre 50 sfumature pastello, metallizzate e cromate. 100% biodegradabili.</p>
+        <div class="costumi-hub-grid">
+            
+            <div class="costume-cat-card">
+                <span class="costume-icon">👩</span>
+                <h3>Donna</h3>
+                <div class="sub-cat-buttons">
+                    <a href="costumi-donna.html#halloween" class="btn-sub btn-halloween">🎃 Halloween</a>
+                    <a href="costumi-donna.html#carnevale" class="btn-sub btn-carnevale">🎭 Carnevale</a>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="card-img img-2">⭐</div>
-                <div class="card-content">
-                    <h3>Palloncini Foil & Mylar</h3>
-                    <p>Forme speciali, personaggi, stelle e cuori lucidi che fluttuano a elio per giorni interi.</p>
+
+            <div class="costume-cat-card">
+                <span class="costume-icon">👨</span>
+                <h3>Uomo</h3>
+                <div class="sub-cat-buttons">
+                    <a href="costumi-uomo.html#halloween" class="btn-sub btn-halloween">🎃 Halloween</a>
+                    <a href="costumi-uomo.html#carnevale" class="btn-sub btn-carnevale">🎭 Carnevale</a>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="card-img img-3">🔢</div>
-                <div class="card-content">
-                    <h3>Numeri e Lettere</h3>
-                    <p>Perfetti per compleanni importanti, anniversari e scritte personalizzate giganti.</p>
+
+            <div class="costume-cat-card">
+                <span class="costume-icon">👧</span>
+                <h3>Bambina</h3>
+                <div class="sub-cat-buttons">
+                    <a href="costumi-bambina.html#halloween" class="btn-sub btn-halloween">🎃 Halloween</a>
+                    <a href="costumi-bambina.html#carnevale" class="btn-sub btn-carnevale">🎭 Carnevale</a>
                 </div>
             </div>
+
+            <div class="costume-cat-card">
+                <span class="costume-icon">👦</span>
+                <h3>Bambino</h3>
+                <div class="sub-cat-buttons">
+                    <a href="costumi-bambino.html#halloween" class="btn-sub btn-halloween">🎃 Halloween</a>
+                    <a href="costumi-bambino.html#carnevale" class="btn-sub btn-carnevale">🎭 Carnevale</a>
+                </div>
+            </div>
+
+            <div class="costume-cat-card">
+                <span class="costume-icon">👶</span>
+                <h3>Infante</h3>
+                <div class="sub-cat-buttons">
+                    <a href="costumi-infante.html#halloween" class="btn-sub btn-halloween">🎃 Halloween</a>
+                    <a href="costumi-infante.html#carnevale" class="btn-sub btn-carnevale">🎭 Carnevale</a>
+                </div>
+            </div>
+
+            <div class="costume-cat-card">
+                <span class="costume-icon">🤪</span>
+                <h3>Goliardico</h3>
+                <div class="sub-cat-buttons" style="display:block; margin-top:22px;">
+                    <a href="costumi-goliardico.html" class="btn-sub btn-goliardico">Esplora i Prodotti</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -59,15 +106,25 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h4>Smile Palloncini</h4>
-                <p>Portiamo colore e allegria alle tue feste.</p>
+                <p>P.IVA:09081420961</p>
+                <p>📍 Via Emilia 50, 20077 Melegnano (Mi)</p>
             </div>
             <div class="footer-col">
                 <h4>Contatti</h4>
-                <p>📍 Via della Festa 12, Milano</p>
-                <p>📞 +39 02 1234567</p>
+                <p>📞Cellulare +39 02 39433463</p>
+                <p>📞Telefono +39 329 2144457</p>
+                 <p>✉️ info@supersmile.it</p>
+            </div>
+            <div class="footer-col">
+                <h4>Orari</h4>
+                <p>Mar - Ven: 10:00-13:00 | 15:00-19:00</p>
+                <p>Sabato: 09:00-19:00</p>
+                <p>Dom - Lun: Chiuso (Disponibili per eventi)</p>
             </div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p>
+        </div>
     </footer>
 
 </body>

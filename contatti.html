@@ -14,13 +14,27 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="palloncini.html">I Nostri Palloncini</a></li>
+                    <li><a href="palloncini.html">Costumi & Accessori</a></li>
                     <li><a href="eventi.html">Feste & Eventi</a></li>
                     <li><a href="fuochi-dartificio.html">Fuochi D'Artificio</a></li>
                     <li><a href="contatti.html" class="active">Contatti</a></li>
                 </ul>
             </nav>
-            <div class="nav-icons"><span>🔍</span></div>
+            <div class="nav-icons">
+                <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+                <label for="sidebar-toggle" class="sidebar-btn">☰</label>
+                <div class="sidebar">
+                    <label for="sidebar-toggle" class="close-btn">&times;</label>
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="contatti.html">Richiedi Preventivo</a></li>
+                        <li><a href="eventi.html">Galleria Foto</a></li>
+                        <li><a href="fuochi-dartificio.html">Il Nostro Team</a></li>
+                        <li><a href="contatti.html">Dove Siamo</a></li>
+                    </ul>
+                </div>
+                <label for="sidebar-toggle" class="sidebar-overlay"></label>
+            </div>
         </div>
     </header>
 
@@ -32,10 +46,13 @@
     <section class="section contact-wrapper">
         <div class="contact-info">
             <h3>Informazioni</h3>
-            <p>📍 <strong>Indirizzo:</strong> Via della Festa 12, Milano</p>
-            <p>📞 <strong>Telefono / WhatsApp:</strong> +39 02 1234567</p>
-            <p>✉️ <strong>Email:</strong> info@supersmile-feste.it</p>
-            <p>⏱️ <strong>Orari:</strong> Lun - Sab / 09:00 - 19:30</p>
+            <p>📍 <strong>Indirizzo:</strong> Via Emilia 50, 20077 Melegnano (Mi)</p>
+            <p>📞 <strong>Telefono / WhatsApp:</strong> +39 02 39433463</p>
+            <p>✉️ <strong>Email:</strong> info@supersmile.it</p>
+            <p>⏱️ <strong>Orari:</strong></p>
+            <p> Mar - Ven: 10:00-13:00 | 15:00-19:00 </p>
+            <p> Sabato: 09:00-19:00</p>
+            <p> Dom - Lun: Chiuso(Disponibili per eventi)</p>
         </div>
 
         <div class="contact-form">
@@ -57,6 +74,10 @@
             </form>
         </div>
     </section>
-
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 </body>
 </html>
