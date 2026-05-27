@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Smile Palloncini</title>
+    <link rel="stylesheet" href="stile.css">
+    <link rel="icon" type="image/x-icon" href="smile.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html"><img src="logo-smile1.png" alt="Smile Logo"></a></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="palloncini.html">Costumi & Accessori</a></li>
+                    <li><a href="eventi.html">Feste & Eventi</a></li>
+                    <li><a href="fuochi-dartificio.html">Fuochi D'Artificio</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+                <label for="sidebar-toggle" class="sidebar-btn">☰</label>
+                <div class="sidebar">
+                    <label for="sidebar-toggle" class="close-btn">&times;</label>
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="contatti.html">Richiedi Preventivo</a></li>
+                        <li><a href="eventi.html">Galleria Foto</a></li>
+                        <li><a href="fuochi-dartificio.html">Il Nostro Team</a></li>
+                        <li><a href="contatti.html">Dove Siamo</a></li>
+                    </ul>
+                </div>
+                <label for="sidebar-toggle" class="sidebar-overlay"></label>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Contattaci</h1>
+        <p>Hai un evento in mente? Parlacene e ti aiuteremo a realizzarlo.</p>
+    </section>
+
+    <section class="section contact-wrapper">
+        <div class="contact-info">
+            <h3>Informazioni</h3>
+            <p>📍 <strong>Indirizzo:</strong> Via Emilia 50, 20077 Melegnano (Mi)</p>
+            <p>📞 <strong>Telefono / WhatsApp:</strong> +39 02 39433463</p>
+            <p>✉️ <strong>Email:</strong> info@supersmile.it</p>
+            <p>⏱️ <strong>Orari:</strong></p>
+            <p> Mar - Ven: 10:00-13:00 | 15:00-19:00 </p>
+            <p> Sabato: 09:00-19:00</p>
+            <p> Dom - Lun: Chiuso(Disponibili per eventi)</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Richiedi un Preventivo</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Descrivi la tua festa (Data, Tipo di evento, Idee)</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Invia Richiesta</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+</html>
