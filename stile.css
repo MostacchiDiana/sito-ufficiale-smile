@@ -565,15 +565,6 @@ footer {
     transition: transform 0.2s, opacity 0.2s;
 }
 
-.btn-halloween {
-    background: linear-gradient(135deg, #ff6600 0%, #cc3300 100%);
-    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
-}
-
-.btn-carnevale {
-    background: linear-gradient(135deg, #a100ff 0%, #7100b3 100%);
-    box-shadow: 0 4px 10px rgba(161, 0, 255, 0.3);
-}
 
 .btn-sub:hover {
     transform: scale(1.05);
@@ -642,7 +633,7 @@ footer {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: white !important;
+    color: black !important;
     transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -657,11 +648,17 @@ footer {
 }
 
 .btn-goliardico {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #c91119 100%);
-    box-shadow: 0 4px 10px rgba(230, 25, 34, 0.3);
+    background:  white 100%;
+    border: skyblue 2px solid;
+    box-shadow: 0 2px 5px rgba(230, 25, 34, 0.3);
     width: 100%;
     display: block;
     text-align: center;
+    transition: box-shadow 0.3 ease;
+}
+
+.btn-goliardico:hover {
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn-sub:hover {
