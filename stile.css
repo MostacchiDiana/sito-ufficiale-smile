@@ -206,22 +206,22 @@ header {
 .btn {
     display: inline-block;
     padding: 14px 40px;
-    background-color: var(--primary-color);
+    background-color: skyblue;
     color: white;
     border-radius: 50px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 5px 20px rgba(230, 25, 34, 0.3);
+    box-shadow: 0 5px 20px white;
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #c91119;
+    background-color:skyblue;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(230, 25, 34, 0.4);
+    box-shadow: 0 8px 25px gray;
 }
 
 /* --- STRUTTURA SEZIONI --- */
@@ -278,7 +278,7 @@ header {
     font-size: 3.5rem;
 }
 
-.img-1 { background-color: #ffebeb; }
+.img-1 { background-color: white; }
 .img-2 { background-color: #e6f7fd; }
 .img-3 { background-color: #fffde6; }
 .img-4 { background-color: #f3f3f3; }
@@ -642,23 +642,14 @@ footer {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: white !important;
+    color: black !important;
     transition: transform 0.2s, opacity 0.2s;
 }
 
-.btn-halloween {
-    background: linear-gradient(135deg, #ff6600 0%, #cc3300 100%);
-    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
-}
-
-.btn-carnevale {
-    background: linear-gradient(135deg, #a100ff 0%, #7100b3 100%);
-    box-shadow: 0 4px 10px rgba(161, 0, 255, 0.3);
-}
-
 .btn-goliardico {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #c91119 100%);
-    box-shadow: 0 4px 10px rgba(230, 25, 34, 0.3);
+    background: white;
+    border: skyblue 2px solid;
+    box-shadow: 0 4px 10px gray;
     width: 100%;
     display: block;
     text-align: center;
