@@ -332,35 +332,39 @@ header {
 }
 
 /* --- PAGINA CHI SIAMO --- */
+/* Contenitore principale che affianca testo e immagine */
 .about-container {
     display: flex;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    align-items: center; /* Allinea verticalmente al centro */
+    gap: 30px; /* Spazio tra il testo e l'immagine */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Contenitore del testo (prende più spazio) */
 .about-text {
-    flex: 1;
-    min-width: 300px;
+    flex: 2; 
 }
 
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
+/* Contenitore dell'immagine modificato (più piccolo) */
 .about-image {
     flex: 1;
-    min-width: 300px;
-    background-color: var(--accent-color);
-    height: 350px;
+    max-width: 300px; /* Limita la larghezza massima del contenitore */
+    height: auto; /* L'altezza si adatta proporzionalmente */
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
+    overflow: hidden; /* Mantiene gli angoli arrotondati dell'immagine */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
+
+/* Regola fondamentale per l'immagine interna */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita che l'immagine si distorca */
+    display: block;
+}
+
 
 /* --- PAGINA CONTATTI & FORM --- */
 .contact-wrapper {
@@ -677,4 +681,98 @@ footer {
         flex-direction: column;
         gap: 8px;
     }
+}
+
+/* Il contenitore diventa una griglia a 3 colonne */
+.about-container.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali */
+    gap: 30px; /* Spazio tra i blocchi */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Struttura del singolo blocco */
+.video-box {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* L'immagine in alto rimpicciolita e proporzionata */
+.video-poster {
+    width: 100%;
+    height: 200px; /* Altezza fissa per tenerle tutte allineate */
+    object-fit: cover; /* Taglia l'immagine senza deformarla */
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* La scritta sotto l'immagine */
+.video-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 15px 0;
+}
+
+/* Il video in basso */
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* DA TELEFONO: Visualizzazione uno sotto l'altro */
+@media (max-width: 768px) {
+    .about-container.video-grid {
+        grid-template-columns: 1fr; /* Diventa 1 sola colonna */
+        gap: 20px; /* Riduce leggermente lo spazio sui telefoni */
+    }
+}
+
+/* Stile della tessera principale */
+.category-card {
+    position: relative; /* Necessario per il posizionamento dello sfondo */
+    overflow: hidden;   /* Mantiene lo sfondo dentro i bordi della tessera */
+    padding: 20px;      /* Spazio interno per il testo */
+    background: #ffffff; /* Colore di base sotto l'immagine */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 250px
+}
+
+/* Creazione dello sfondo trasparente */
+.category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 45%; /* Trasparenza al 30% */
+    z-index: 1;    /* Posiziona lo sfondo dietro il testo */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Collegamento dell'immagine specifica */
+.img-bg-1::before {
+    background-image: url('images.jpg');
+}
+.img-bg-2::before {
+    background-image: url('images2.jpg');
+}
+.img-bg-3::before {
+    background-image: url('images3.jpg');
+}
+
+/* Forza il testo a rimanere sopra lo sfondo */
+.card-content {
+    position: relative;
+    z-index: 2; 
 }
