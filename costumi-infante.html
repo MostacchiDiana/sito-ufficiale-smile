@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Costumi Infante | Super Smile</title>
     <link rel="stylesheet" href="stile.css">
+    <link rel="icon" type="image/png" href="smile-Photoroom.png">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="palloncini.html" class="active">Costumi & Accessori</a></li>
                     <li><a href="eventi.html">Feste & Eventi</a></li>
-                    <li><a href="fuochi-dartificio.html">Chi Siamo</a></li>
+                    <li><a href="fuochi-dartificio.html">Fuochi D'Artificio</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
             </nav>
@@ -45,43 +46,51 @@
     </section>
 
     <section class="section">
-        
-        <h2 class="sub-section-title" id="halloween">🎃 Collezione 
-            ween</h2>
-        <div class="grid-products">
-            <div class="product-card">
-                <div class="card-img img-1">🧙‍♀️</div>
-                <div class="card-content">
-                    <h3>Costume Strega Elegant</h3>
-                    <p>Abito lungo rifinito in velluto nero con cappello a punta incluso.</p>
+        <div class="grid-products-only">
+            <a href="#img1" class="open-lightbox">
+                <div class="card-img-container">
+                    <img src="inf1.jpg" alt="Costume 1" class="product-thumb">
                 </div>
-            </div>
-            <div class="product-card">
-                <div class="card-img img-4">🧛‍♀️</div>
-                <div class="card-content">
-                    <h3>Vampira Luxury</h3>
-                    <p>Completo con corsetto stringato rosso e mantello a collo alto.</p>
+            </a>
+            <a href="#img2" class="open-lightbox">
+                <div class="card-img-container">
+                    <img src="inf2.jpg" alt="Costume 2" class="product-thumb">
                 </div>
+            </a>
+            <a href="#img3" class="open-lightbox">
+                <div class="card-img-container">
+                    <img src="inf3.jpg" alt="Costume 3" class="product-thumb">
+                </div>
+            </a>
+        </div>
+
+        <div id="img1" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <div class="lightbox-content">
+                <a href="#img3" class="arrow prev">&#10094;</a>
+                <img src="inf1.jpg" alt="Costume 1">
+                <a href="#img2" class="arrow next">&#10095;</a>
             </div>
         </div>
 
-        <h2 class="sub-section-title" id="carnevale">🎭 Collezione Carnevale</h2>
-        <div class="grid-products">
-            <div class="product-card">
-                <div class="card-img img-2">👑</div>
-                <div class="card-content">
-                    <h3>Regina delle Feste</h3>
-                    <p>Abito sfarzoso in stile barocco ricco di paillettes e rifiniture dorate.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="card-img img-3">💃</div>
-                <div class="card-content">
-                    <h3>Vestito Anni '20 Flapper</h3>
-                    <p>Tipico abito con frange oscillanti, collana di perle e fascia con piuma.</p>
-                </div>
+        <div id="img2" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <div class="lightbox-content">
+                <a href="#img1" class="arrow prev">&#10094;</a>
+                <img src="inf2.jpg" alt="Costume 2">
+                <a href="#img3" class="arrow next">&#10095;</a>
             </div>
         </div>
+
+        <div id="img3" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <div class="lightbox-content">
+                <a href="#img2" class="arrow prev">&#10094;</a>
+                <img src="inf3.jpg" alt="Costume 3">
+                <a href="#img1" class="arrow next">&#10095;</a>
+            </div>
+        </div>
+
         <div style="text-align: center; margin-top: 50px;">
             <a href="palloncini.html" class="btn">Torna a tutte le categorie</a>
         </div>
@@ -96,9 +105,9 @@
             </div>
             <div class="footer-col">
                 <h4>Contatti</h4>
-                <p>📞Cellulare +39 02 39433463</p>
-                <p>📞Telefono +39 329 2144457</p>
-                 <p>✉️ info@supersmile.it</p>
+                <p>📞Telefono: 02 39433465 </p>
+                <p>📞WhatsApp: +39 340 9430750 </p>                 
+                <p>✉️ info@supersmile.it</p>
             </div>
             <div class="footer-col">
                 <h4>Orari</h4>

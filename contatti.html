@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti | Super Smile</title>
     <link rel="stylesheet" href="stile.css">
-    <link rel="icon" type="image/x-icon" href="smile.jpg">
+    <link rel="icon" type="image/png" href="smile-Photoroom.png">
 </head>
 <body>
 
@@ -49,7 +49,8 @@
         <div class="contact-info">
             <h3>Informazioni</h3>
             <p>📍 <strong>Indirizzo:</strong> Via Emilia 50, 20077 Melegnano (Mi)</p>
-            <p>📞 <strong>Telefono / WhatsApp:</strong> +39 02 39433463</p>
+            <p>📞 <strong>Telefono:</strong> 02 39433465 </p>
+            <p>📞 <strong>WhatsApp:</strong> +39 340 9430750 </p>
             <p>✉️ <strong>Email:</strong> info@supersmile.it</p>
             <p>⏱️ <strong>Orari:</strong></p>
             <p> Mar - Ven: 10:00-13:00 | 15:00-19:00 </p>
@@ -57,8 +58,8 @@
             <p> Dom - Lun: Chiuso(Disponibili su appuntamento)</p>
             <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.4084374694923!2d9.324152225952895!3d45.36359684720654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786d1e53d330287%3A0xd1d58ed2cf5b716b!2sSmile!5e0!3m2!1sit!2sit!4v1779961190476!5m2!1sit!2sit" 
-            width="400" 
-            height="350" 
+            width="300" 
+            height="250" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
@@ -67,21 +68,26 @@
         </div>
 
         <div class="contact-form">
-            <h3>Richiedi un Preventivo</h3>
-            <form action="#">
+            <h3>Compila il Form</h3>
+            <form id="my-form" action="https://formspree.io/f/xzdqbdjw" method="POST">
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="Nome" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="E-mail" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Descrivi la tua festa (Data, Tipo di evento, Idee)</label>
-                    <textarea id="message" rows="5" required></textarea>
+                    <label for="subject">Oggetto e-mail</label>
+                    <input type="text" id="subject" name="Oggetto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="Messaggio" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn">Invia Richiesta</button>
+                <p id="form-status" style="margin-top: 15px; font-weight: bold; text-align: center;"></p>
             </form>
         </div>
     </section>
@@ -90,5 +96,47 @@
             <p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p>
         </div>
     </footer>
+    <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault(); // Impedisce il reindirizzamento automatico a Formspree
+      var status = document.getElementById("form-status");
+      var data = new FormData(event.target);
+      
+      // Messaggio di attesa
+      status.innerHTML = "Invio in corso...";
+      status.style.color = "#333";
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // Successo: colora il testo di verde, svuota il form e avvisa l'utente
+          status.innerHTML = "Grazie! Il tuo messaggio è stato inviato con successo.";
+          status.style.color = "#2ecc71";
+          form.reset(); 
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data['errors'].map(error => error['message']).join(", ");
+            } else {
+              status.innerHTML = "Ops! Si è verificato un problema durante l'invio.";
+              status.style.color = "#e74c3c";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Ops! Si è verificato un errore di rete. Riprova più tardi.";
+        status.style.color = "#e74c3c";
+      });
+    }
+    
+    form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 </html>
