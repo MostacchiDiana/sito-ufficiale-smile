@@ -1,6 +1,8 @@
 /* --- RESET E VARIABILI (Colori estratti dal Logo) --- */
 * 
 {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -538,6 +540,10 @@ footer {
 }
 
 .costume-cat-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.costume-cat-card:hover {
     transform: translateY(-5px);
     border-color: var(--secondary-color);
     box-shadow: 0 6px 18px rgba(0,0,0,0.03);
@@ -677,6 +683,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-height: 250px;
+    border: skyblue 2px solid;
     min-height: 250px;
     border: skyblue 2px solid;
 }
