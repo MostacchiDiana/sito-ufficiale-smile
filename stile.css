@@ -1,5 +1,6 @@
 /* --- RESET E VARIABILI (Colori estratti dal Logo) --- */
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +16,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color:#D1EDF2;
     color: var(--dark-color);
     line-height: 1.6;
     overflow-x: hidden;
@@ -732,7 +733,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 250px
+    min-height: 250px;
+    border: skyblue 2px solid;
 }
 
 /* Creazione dello sfondo trasparente */
