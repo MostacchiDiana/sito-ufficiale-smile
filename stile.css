@@ -523,21 +523,6 @@ footer {
     margin-top: 40px;
 }
 
-.costume-cat-card {
-    background: #ffffff;
-    border: 2px solid #eef7fa;
-    border-radius: 20px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.costume-cat-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--secondary-color);
-}
-
 .costume-icon {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -596,13 +581,17 @@ footer {
 }
 
 .costume-cat-card {
-    background: #ffffff;
-    border: 2px solid #eef7fa;
+    background: white;
+    border: 2px solid skyblue;
     border-radius: 20px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 5px rgba(230, 25, 34, 0.3);
     transition: transform 0.3s, border-color 0.3s;
+}
+
+.costume-cat-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .costume-cat-card:hover {
