@@ -160,6 +160,18 @@
             <p>&copy; 2026 Smile Palloncini. Tutti i diritti riservati.</p>
         </div>
     </footer>
+    <a href="fuochi-dartificio.html" class="back-to-top" id="btnScrollToTop" aria-label="Torna su"> &#x2191; </a>
+  <script>
+  const btnScrollToTop = document.getElementById("btnScrollToTop");
 
+  window.addEventListener("scroll", () => {
+    // Se l'utente scende più di 300px, mostra il pulsante, altrimenti nascondilo
+    if (window.scrollY > 300) {
+      btnScrollToTop.classList.add("show");
+    } else {
+      btnScrollToTop.classList.remove("show");
+    }
+  });
+</script>
 </body>
 </html>

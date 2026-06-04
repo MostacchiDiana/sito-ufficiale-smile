@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 :root {
     --primary-color: #e61922;    /* Rosso Smile */
     --secondary-color: #5bc2e7;  /* Azzurro Smile */
@@ -878,4 +877,41 @@ footer {
     .lightbox .arrow { font-size: 40px; bottom: -80px; }
     .lightbox .prev { left: 20%; }
     .lightbox .next { right: 20%; }
+}
+/* Stile del pulsante Torna Su */
+.back-to-top {
+  position: fixed;       /* Lo fissa rispetto allo schermo */
+  bottom: 20px;          /* Distanza dal fondo */
+  right: 20px;           /* Distanza da destra */
+  width: 40px;           /* Larghezza del cerchio */
+  height: 40px;          /* Altezza del cerchio */
+  background-color: #007bff; /* Colore di sfondo (cambialo come preferisci) */
+  color: white;          /* Colore della freccia */
+  text-decoration: none; /* Rimuove la sottolineatura del link */
+  border-radius: 50%;    /* Lo rende un cerchio perfetto */
+  display: flex;         /* Usa flexbox per centrare la freccia */
+  align-items: center;   /* Centra verticalmente */
+  justify-content: center;/* Centra orizzontalmente */
+  font-size: 20px;       /* Dimensione della freccia */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Un pizzico di ombra */
+  transition: all 0.3s ease; /* Transizione fluida per l'effetto hover */
+  z-index: 1000;         /* Si assicura che stia sopra agli altri elementi */
+}
+
+/* Effetto quando ci passi sopra con il mouse */
+.back-to-top:hover {
+  background-color: #0056b3; /* Colore più scuro al passaggio del mouse */
+  transform: translateY(-5px); /* Effetto rimbalzo verso l'alto */
+}
+
+/* Nascondiamo il pulsante di default */
+.back-to-top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Classe che aggiungeremo con JavaScript quando l'utente scorre */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
